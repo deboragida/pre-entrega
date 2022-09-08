@@ -1,0 +1,267 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@400;500;700&display=swap);
+
+@mixin i_slides_style {
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    border-radius: 10px;
+}
+/*Tamaños tipograficos*/
+$body: 16px;
+$h1: 40px;
+$h2: 32px;
+$h3: 24px;
+   
+/* Paleta de colores*/
+$color1: #995EBA;
+$color2: #91BBF2;
+$color3: #73478B;
+$color4: #F2490C;
+$color5: white;
+$color6: black;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Estilos textos y botones */
+h1,
+h2,
+h3,
+h4 {
+    font: {
+        family: 'Rubik',
+            sans-serif;
+        weight: 400;
+    }
+
+    color: $color5;
+    margin-bottom: 20px;
+}
+
+p {
+    font: {
+        family: 'Roboto',
+            sans-serif;
+        weight: 400;
+        size: 16px
+    }
+
+    line-height: 24px;
+    color: $color6;
+}
+
+.btn {
+    font-family: 'Rubik',
+        sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+/* Slides */
+.slider {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .slider_texto {
+        background-color: $color1;
+        border-radius: 10px;
+        padding: 80px 80px;
+    }
+
+    .slider_foto {
+        background-image: url(../imagenes/i_home.jpg);
+        @include i_slides_style(
+    );
+    margin-left: -30px;
+}
+}
+
+.slide_quienes {
+    background-image: url(../imagenes/slide_foto.jpg);
+    @include i_slides_style();
+    margin: 30px 0px 40px 0px;
+}
+
+/* Areas de tratamiento */
+.areas {
+    background-color: $color2;
+    align-items: center;
+    padding: 80px 80px;
+}
+
+.row {
+    align-items: center;
+}
+
+.areas_titulo {
+    padding-bottom: 30px;
+}
+
+.img {
+    background-color: $color5;
+    border-radius: 10px;
+    padding-bottom: 60px;
+    
+}
+
+/* Call Donar */
+.jumbotron {
+    border-radius: 0;
+    padding: 30px 80px 30px 80px;
+    margin-bottom: 0px;
+}
+
+.donar {
+    background-image: linear-gradient(to left, #FF6C00, #F2490C);
+}
+
+/* Novedades */
+.novedades {
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    h2 {
+        font-size: $h2
+        ;
+    }
+    .row {
+        align-items: flex-start;
+    }
+}
+
+.card {
+    border: 0px;
+}
+
+.card-title {
+    color: $color1;
+}
+
+/* Nosotros */
+.nosotros {
+    margin: 0;
+    padding: 20px 80px 20px 80px
+}
+
+/* Sede */
+.sede {
+    margin: 0;
+    padding: 10px 80px;
+}
+
+.i_sede {
+    height: 350px;
+    width: auto;
+}
+
+/* Misión y Visión */
+.mision {
+    background-color: $color2;
+    padding: 80px 80px;
+}
+
+.texto_mision {
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: initial;
+}
+
+.texto_mision p {
+    color: $color5;
+}
+
+/* Como ayudar */
+.clase-ayuda {
+    align-items: flex-start;
+}
+
+/* Contacto */
+.formulario {
+    background-color: $color1;
+    padding: 60px 80px;
+}
+
+.form-control {
+    margin-bottom: 12px;
+    border: 0px;
+}
+
+.fa-brands {
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 10px;
+    color: $color5;
+}
+
+.footer {
+    background-color: $color3;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .slider {
+        margin-top: 160px;
+    }
+
+    .slider_texto {
+        background-color: #995EBA;
+        border-radius: 0px;
+        padding: 30px 30px 30px 30px;
+    }
+
+    .areas {
+        padding: 30px;
+    }
+
+    .img {
+        overflow: hidden;
+    }
+
+    .jumbotron {
+        padding: 2rem 2rem;
+    }
+
+    .mision {
+        padding: 20px;
+    }
+
+    .nosotros {
+        padding: 20px;
+    }
+
+    .sede {
+        padding: 20px;
+    }
+
+    .formulario {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        margin-top: 60px;
+    }
+
+    .slider_texto {
+        background-color: #995EBA;
+        padding: 30px 50px 30px 30px;
+    }
+}
+
+@import "menu";
